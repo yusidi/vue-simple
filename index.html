@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VUE</title>
+</head>
+<body>
+<script src="Observer.js"></script>
+<script src="Watcher.js"></script>
+<script src="Compiler.js"></script>
+<script src="Vue.js"></script>
+<div id="msg">
+    <span>当前{{times}}次</span>
+</div>
+<script>
+    var vue = new VUE({
+        el:"msg",
+        data:{
+            times: 0
+        },
+    });
+    
+    var times = setInterval(function () {
+        vue.times++
+    }, 1000)
+
+</script>
+</body>
+</html>
